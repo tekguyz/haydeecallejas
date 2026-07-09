@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { siteCopy } from "@/lib/siteCopy";
@@ -21,6 +21,10 @@ const ogImage = {
   width: 1200,
   height: 630,
   alt: title,
+};
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
 };
 
 export const metadata: Metadata = {
