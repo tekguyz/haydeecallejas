@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0a0a0a;
+  --canvas: #ffffff;
+  --accent: #b8371f;
+  --accent-active: #972d19;
+  --surface-dark: #0a0a0a;
+  --hairline: #e5e5e5;
+  --body: #3a3a3a;
+  --muted: #767676;
+  --on-dark: #ffffff;
+  --whatsapp-green: #25d366;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-canvas: var(--canvas);
+  --color-accent: var(--accent);
+  --color-accent-active: var(--accent-active);
+  --color-surface-dark: var(--surface-dark);
+  --color-hairline: var(--hairline);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-on-dark: var(--on-dark);
+  --color-whatsapp-green: var(--whatsapp-green);
+
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-playfair-display);
+
+  /* Typography hierarchy per DESIGN.md */
+  --text-display-lg: 2.5rem; /* 40px — campaign hero headline, serif */
+  --text-display-md: 1.75rem; /* 28px — section heads, serif */
+  --text-title-md: 1.125rem; /* 18px — product card titles, sans */
+  --text-body-md: 1rem; /* 16px — descriptions, running text, sans */
+  --text-caption: 0.8125rem; /* 13px — swatch color labels, sans */
+  --text-button: 0.9375rem; /* 15px — CTA button labels, sans */
+
+  /* Radius scale per DESIGN.md — capped at 8px, no xl/pill shapes */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* The only shadow in the system — active/selected swatch state only */
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+}
