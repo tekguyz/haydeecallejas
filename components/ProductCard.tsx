@@ -109,53 +109,55 @@ export function ProductCard({
           ${product.price.toFixed(2)}
         </p>
 
-        <div className="flex h-[124px] flex-wrap content-start items-center gap-2 pt-1">
-          {product.variants.map((variant, index) => {
-            if (!showAllSwatches && index >= visibleSwatchCount) return null;
-            return (
+        <div className="flex h-[152px] flex-col gap-2 pt-1">
+          <div className="flex flex-wrap content-start gap-2">
+            {product.variants.map((variant, index) => {
+              if (!showAllSwatches && index >= visibleSwatchCount) return null;
+              return (
+                <button
+                  key={variant.colorLabel}
+                  type="button"
+                  onClick={() => setSelectedIndex(index)}
+                  aria-label={variant.colorLabel}
+                  aria-pressed={index === selectedIndex}
+                  className={`relative h-9 w-9 shrink-0 overflow-hidden rounded-full border ${
+                    index === selectedIndex
+                      ? "border-2 border-ink shadow-subtle"
+                      : "border-hairline"
+                  }`}
+                >
+                  <Image
+                    src={variant.imageUrl}
+                    alt={variant.colorLabel}
+                    fill
+                    sizes="36px"
+                    className="object-cover"
+                  />
+                </button>
+              );
+            })}
+            {hasSwatchOverflow && !showAllSwatches && (
               <button
-                key={variant.colorLabel}
                 type="button"
-                onClick={() => setSelectedIndex(index)}
-                aria-label={variant.colorLabel}
-                aria-pressed={index === selectedIndex}
-                className={`relative h-9 w-9 shrink-0 overflow-hidden rounded-full border ${
-                  index === selectedIndex
-                    ? "border-2 border-ink shadow-subtle"
-                    : "border-hairline"
-                }`}
+                onClick={() => setShowAllSwatches(true)}
+                aria-label={`Ver ${hiddenSwatchCount} colores más`}
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-hairline bg-canvas text-caption font-medium text-muted"
               >
-                <Image
-                  src={variant.imageUrl}
-                  alt={variant.colorLabel}
-                  fill
-                  sizes="36px"
-                  className="object-cover"
-                />
+                +{hiddenSwatchCount}
               </button>
-            );
-          })}
-          {hasSwatchOverflow && !showAllSwatches && (
-            <button
-              type="button"
-              onClick={() => setShowAllSwatches(true)}
-              aria-label={`Ver ${hiddenSwatchCount} colores más`}
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-hairline bg-canvas text-caption font-medium text-muted"
-            >
-              +{hiddenSwatchCount}
-            </button>
-          )}
-        </div>
+            )}
+          </div>
 
-        <p className="text-caption font-medium text-muted">
-          {selectedVariant.colorLabel}
-        </p>
+          <p className="text-caption font-medium text-muted">
+            {selectedVariant.colorLabel}
+          </p>
+        </div>
 
         <a
           href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-auto flex items-center justify-center gap-1.5 rounded-sm bg-ink px-3 py-2 text-button font-semibold text-white transition-colors active:bg-ink/85"
+          className="mt-auto flex items-center justify-center gap-1.5 whitespace-nowrap rounded-sm bg-ink px-3 py-2 text-button font-semibold text-white transition-colors active:bg-ink/85"
         >
           <WhatsAppIcon className="h-4 w-4 shrink-0 text-whatsapp-green" />
           {siteCopy.cta.buttonText}
