@@ -24,8 +24,8 @@ No phase begins before the prior phase's client sign-off is confirmed. **Status 
 
 ## 3a. Domain Status
 - `haydeecallejas.net` — registered, parked (Namecheap default page, no site attached), actively used for her email (`hc@haydeecallejas.net`). Her son holds credentials. Do not touch MX/email DNS records on this domain when building anything.
-- `haydeecallejas.com` — being purchased now (TEKGUYZ account, informal family arrangement, transfer to her later if it ever matters). Will be canonical domain for the new site once live; `.net` can redirect to it or stay as-is for email only.
-- **Interim working URL:** `https://haydeecallejas.vercel.app` — changed 2026-07-09 via Vercel dashboard → Settings → Domains: added this domain directly, then deleted the old `haydee-callejas-site.vercel.app` domain (confirmed now 404s). This was a manual domain swap, **not** a project rename — renaming a Vercel project does not automatically move or create domains. `app/layout.tsx`'s `metadataBase` was updated to match and redeployed same day.
+- `haydeecallejas.com` — purchased 2026-07-09 (GoDaddy, TEKGUYZ account, informal family arrangement, transfer to her later if it ever matters). Live and canonical: DNS points at Vercel, added as the Vercel project's custom domain and set as production target. The apex 308-redirects to `www.haydeecallejas.com`, which actually serves the site — `app/layout.tsx`'s `metadataBase` and all OG/meta URLs point at the `www` host for that reason. `.net` continues to be used for email only, untouched.
+- **Prior interim working URL** (superseded 2026-07-09 by the custom domain above, still resolves): `https://haydeecallejas.vercel.app` — added 2026-07-09 via Vercel dashboard → Settings → Domains, replacing the earlier `haydee-callejas-site.vercel.app` (confirmed now 404s). That was a manual domain swap, **not** a project rename — renaming a Vercel project does not automatically move or create domains.
 
 ## 3b. Phase 1 Stack Decision (settled)
 Next.js App Router + TypeScript + Tailwind, deployed Vercel-native — not the earlier-considered single-page React + Vite build, and not a static export. Deliberate call, not drift: Vercel-native rendering conventions made `next/image`'s on-demand Image Optimization, OG/share-image generation, meta tags, and Analytics wiring meaningfully easier to get right than bolting them onto a bare Vite SPA or a static export. Given the amount already shipped on this stack (video hero, lightbox, OG/meta, Analytics), this is the settled Phase 1 stack, full stop — not open for revisit absent a real forcing function.
@@ -102,8 +102,9 @@ Both uploaded to Project Files and archived in the shared Google Photos album.
 - [x] Phase 1 stack — resolved: Next.js App Router, Vercel-native (see Section 3b)
 - [x] Product descriptions — resolved: tightened copy, genuino preserved on genuine-leather items, no Spanglish (see Section 9)
 - [x] OG/share image, favicons, page metadata — resolved 2026-07-09 (see Section 13)
-- [x] Vercel domain switch — resolved 2026-07-09: live at `haydeecallejas.vercel.app`, done via Settings → Domains, not a project rename (see Section 3a)
+- [x] Vercel domain switch — resolved 2026-07-09: live at `haydeecallejas.vercel.app` (interim, since superseded), done via Settings → Domains, not a project rename (see Section 3a)
 - [x] Flat-lay dead-field cleanup — resolved 2026-07-09: removed entirely (see Section 13)
+- [x] Custom domain (`haydeecallejas.com`) — resolved 2026-07-09: purchased, DNS pointed at Vercel, canonical URL is `www.haydeecallejas.com` (apex redirects there) (see Section 3a)
 - [ ] Business email provider decision
 - [ ] Lifestyle/in-use shots (4 needed)
 - [ ] Full product line beyond the 4 clearance items (for later phases)

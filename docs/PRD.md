@@ -77,5 +77,6 @@ Variant {
 - ~~EmailJS account setup~~ — resolved 2026-07-08: no EmailJS anywhere, backup contact is a footer-level link (Section 7, items 5–6).
 - ~~Confirm final palette/type choice~~ — resolved: ink/canvas/whatsapp-green palette, Playfair Display serif, stable across many rounds.
 - Lifestyle shots (4, not yet produced) — decide whether to block launch on these or ship without and add later
-- ~~Vercel domain switch~~ — resolved 2026-07-09: live URL is `haydeecallejas.vercel.app`, changed via Settings → Domains (delete old + add new) — not a project rename, that's a separate action that doesn't move domains on its own. `metadataBase` updated to match.
+- ~~Vercel domain switch~~ — resolved 2026-07-09: interim live URL was `haydeecallejas.vercel.app`, changed via Settings → Domains (delete old + add new) — not a project rename, that's a separate action that doesn't move domains on its own. Since superseded by the custom domain below.
 - ~~`flatlayUrl` dead field~~ — resolved 2026-07-09: removed entirely (field, data, source images) — see Section 6.
+- ~~Custom domain~~ — resolved 2026-07-09: `haydeecallejas.com` purchased and connected via Vercel, canonical URL is `https://www.haydeecallejas.com` (apex redirects there). `metadataBase` in `app/layout.tsx` updated to match.
