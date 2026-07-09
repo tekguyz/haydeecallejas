@@ -38,7 +38,7 @@ export const products: Product[] = [
   {
     id: "cartera-corazon",
     name: "Cartera corazón",
-    description: "Cuero italiano genuino. Diseño llamativo, acabado impecable.",
+    description: "Cuero italiano genuino. Diseño llamativo, acabado sobrio.",
     price: 95,
     defaultColorLabel: "Negro",
     variants: [
