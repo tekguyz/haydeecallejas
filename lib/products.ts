@@ -17,7 +17,7 @@ export const products: Product[] = [
   {
     id: "mini-bag-crossbody",
     name: "Mini bag crossbody",
-    description: "Gamuza italiana. Tacto suave, uso diario.",
+    description: "Gamuza italiana. Tacto suave, ideal para uso diario.",
     price: 75,
     defaultColorLabel: "Café",
     variants: [
@@ -62,7 +62,7 @@ export const products: Product[] = [
   },
   {
     id: "telefonera-estilo-1",
-    name: "Telefonera",
+    name: "Telefonera cuero",
     description: "Cuero italiano genuino. Compacta, ideal para lo esencial.",
     price: 75,
     defaultColorLabel: "Violeta",

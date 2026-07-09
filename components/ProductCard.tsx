@@ -99,15 +99,17 @@ export function ProductCard({
       )}
 
       <div className="flex flex-1 flex-col gap-2 p-5">
-        <h2 className="text-title-md font-semibold text-ink">
+        <h2 className="line-clamp-2 h-[2lh] text-title-md font-semibold text-ink">
           {product.name}
         </h2>
-        <p className="text-body-md text-body">{product.description}</p>
+        <p className="line-clamp-4 h-[4lh] text-body-md text-body">
+          {product.description}
+        </p>
         <p className="text-xl font-bold text-ink">
           ${product.price.toFixed(2)}
         </p>
 
-        <div className="flex flex-wrap items-center gap-2 pt-1">
+        <div className="flex h-[124px] flex-wrap content-start items-center gap-2 pt-1">
           {product.variants.map((variant, index) => {
             if (!showAllSwatches && index >= visibleSwatchCount) return null;
             return (
