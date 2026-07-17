@@ -25,6 +25,24 @@ export function InstagramIcon({ className }: { className?: string }) {
   );
 }
 
+export function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M14.5 8.5h-1.5a2 2 0 0 0-2 2v1.5H9v2.5h2v5.5h2.5V14.5h2l.5-2.5h-2.5V10.5a.75.75 0 0 1 .75-.75h1.75z" />
+    </svg>
+  );
+}
+
 export function PhoneIcon({ className }: { className?: string }) {
   return (
     <svg

@@ -12,11 +12,12 @@ export const siteCopy = {
   footer: {
     brandName: "Haydee Callejas",
     instagramHandle: "@haydeecallejas",
+    facebookHandle: "/haydeecallejas",
     phoneDisplay: "+505 8900 0408",
-    emailDisplay: "hc@haydeecallejas.net",
+    emailDisplay: "hc@haydeecallejas.com",
   },
   meta: {
-    title: "Haydee Callejas — Liquidación de Medio Año",
+    title: "Cuero Genuino & Pieles Exóticas — Liquidación de Medio Año",
     description:
       "Piezas selectas en cuero genuino y materiales exóticos, en cantidad limitada. Descubra la colección y consulte directamente por WhatsApp.",
   },

@@ -4,31 +4,36 @@ Prepared by TEKGUYZ | Project Files reference document
 ## 1. The Designer
 - Name: Haydee Callejas ("HC"). Origin: Nicaragua. Works in luxury fashion accessories using high-end exotic leathers, distinctive grains and textures.
 - Non-technical — her domain is physical design, material quality, tactile experience, visual craft. All strategic and technical decisions route through TEKGUYZ; she owns final creative/business approval.
-- Contact: hc@haydeecallejas.net · (505) 8900 0408
+- Contact: business email now `hc@haydeecallejas.com` (Google Workspace, live) · previously `hc@haydeecallejas.net`, being retired · (505) 8900 0408
 - Relationship: TEKGUYZ's aunt, engaged as a formal client. She initiated by requesting a social/brand analysis and a 6-month proposal for launching her new collection "under TEKGUYZ standards" while preserving the brand's essence and history.
+- Identity/billing verification with Google Workspace is complete — confirmed via her national ID that the payment method on file is her own (a legal-name abbreviation triggered an automated mismatch flag; resolved through Google's standard verification). No identity document numbers, DOB, or address are stored in this file — see CLAUDE.md's PII handling rule.
 
 ## 2. Engagement Structure
 - Haydee: the designer. Owns the creative vision, product line, and brand essence — this doesn't transfer to TEKGUYZ. She weighs in when asked on specific things (a color, a photo, how something feels).
 - TEKGUYZ: handles everything technical and organizational — execution, systems, copy production — so Haydee can stay focused on the craft. Not a creative director standing in for her; a technical/organizational partner clearing the path.
 - Check-ins happen continuously (not just at phase boundaries) — TEKGUYZ is reachable any day, weekends included.
+- **Domain/infrastructure ownership:** Haydee holds ultimate ownership (WHOIS being updated to her legal name/info). TEKGUYZ retains operational admin access (DNS, Vercel, Google Workspace) on her behalf — a deliberate arrangement so she "has the keys" without having to manage the technical side herself.
+- **Payment structure (verbal agreement, formal written version in progress — see Section 16):** TEKGUYZ fronted the domain cost (~$45, 3-year GoDaddy registration) and is reimbursed as part of an initial fee once a defined set of deliverables is complete (media assets, campaign package, social handle rebranding across platforms, plus items still being finalized). Work beyond that initial fee — future phases — will be billed based on TEKGUYZ's estimated hours per project/phase, with structure (upfront, split, or flat) varying by complexity. She has agreed she should know exactly what she's paying for and what's been delivered at each point — a written itemized summary is being prepared (see Section 16).
 
-## 3. Phase Roadmap (current — supersedes any earlier version)
+## 3. Phase Roadmap (current — supersedes any earlier version, including any AI-assisted drafts that proposed different phase numbering)
 | Phase | Scope | Gate to close |
 |---|---|---|
-| 1. Clearance Campaign + Sales Fix (current) | Sell the 4 leftover pieces; good photos/copy/media; **Next.js (App Router) site with Vercel-native rendering — product showcase, WhatsApp-first contact, lightweight backup form** so interested buyers have somewhere to actually purchase instead of hitting the generic auto-reply | Client approves campaign creative + confirms the site is live and usable |
-| 2. Brand Identity + Local Presence | Google Business Profile setup + local SEO copy; brand book (voice, OKLCH palette, typography) | Client signs off on brand book and GBP copy |
-| 3. Social & Media Infrastructure | Instagram/Facebook/Pinterest/TikTok setup; banner/cover layouts; grid rules; video overlay copy bank | Client approves platform setup and asset templates |
-| 4. Full Custom Platform (optional/later) | Only if the business outgrows the Phase 1 site — full Next.js/Supabase storefront with real payment integration (Nicaragua-compatible processor TBD via separate research). Not committed to yet. | Client-facing requirements finalized here; execution rules live in TEKGUYZ Engineering workspace |
+| 1. Clearance Campaign + Sales Fix (built, live, client-approved) | Sell the 4 leftover pieces; good photos/copy/media; Next.js (App Router) site with Vercel-native rendering — product showcase, WhatsApp-first contact | Client approves campaign creative + confirms the site is live and usable — **done, Haydee has seen and loves it** |
+| 2. Brand Identity + Local Presence | Google Business Profile setup + local SEO copy; brand book (voice, OKLCH palette, typography) — **social rebranding (new logo, unified bio/copy across platforms) is happening now, ahead of formal gate closure, at Haydee's request.** GBP setup itself is **pending** — waiting to confirm with Haydee whether her showroom is a standalone location, a shared/consignment space (possibly tied to "Shap Collective Store"), or by-appointment-only, before any listing is created. | Client signs off on brand book and GBP copy |
+| 3. Social & Media Infrastructure | Instagram/Facebook/Pinterest/TikTok setup; banner/cover layouts; grid rules; video overlay copy bank — **actively starting now** (see Section 16) | Client approves platform setup and asset templates |
+| 4. Full Custom Platform (optional/later) | Full Next.js/Supabase storefront with entire product line (not just the 4 clearance items), brand-story sections, real payment integration. Haydee has expressed interest in this for the future — **not committed, not scheduled, not currently in progress.** Deferred specifically because receiving payments from Nicaragua has real unresolved friction (see Section 10) — Phase 1 was built instead to solve the actual urgent need: a real purchase path, replacing the prior Beacons link that only offered a generic WhatsApp auto-message and a newsletter signup. | Client-facing requirements finalized here; execution rules live in TEKGUYZ Engineering workspace |
 
-No phase begins before the prior phase's client sign-off is confirmed. **Status as of now: logos are done (see Section 11), most Phase 1 media assets are done (see Section 13), site build in progress (see Section 3b for stack decision), copy centralized into `lib/siteCopy.ts` and product descriptions finalized (see Section 9).** Onboarding email sent. Domain purchase in progress.
+**Note on scope:** Phase 2 and Phase 3 work (social platform rebranding, campaign assets) is happening concurrently/early rather than strictly sequentially, because Haydee asked for it directly after seeing Phase 1. This is not a new phase or a renumbering — it's early execution within the existing roadmap. Any external tool or draft that proposes a different phase structure (e.g., "Phase 1 = infra + social, Phase 2 = full site") does not reflect this project's actual roadmap and should be disregarded.
+
+**Status as of now:** Phase 1 built, live, and personally approved by Haydee — she loves the site and the media assets. Currently executing: unified branding rollout across her social platforms (new black-mark logo, matching visual identity, standardized bio copy), campaign asset production for the Instagram push, and defining the exact deliverable set that closes out the initial payment.
 
 ## 3a. Domain Status
-- `haydeecallejas.net` — registered, parked (Namecheap default page, no site attached), actively used for her email (`hc@haydeecallejas.net`). Her son holds credentials. Do not touch MX/email DNS records on this domain when building anything.
-- `haydeecallejas.com` — purchased 2026-07-09 (GoDaddy, TEKGUYZ account, informal family arrangement, transfer to her later if it ever matters). Live and canonical: DNS points at Vercel, added as the Vercel project's custom domain and set as production target. The apex 308-redirects to `www.haydeecallejas.com`, which actually serves the site — `app/layout.tsx`'s `metadataBase` and all OG/meta URLs point at the `www` host for that reason. `.net` continues to be used for email only, untouched.
-- **Prior interim working URL** (superseded 2026-07-09 by the custom domain above, still resolves): `https://haydeecallejas.vercel.app` — added 2026-07-09 via Vercel dashboard → Settings → Domains, replacing the earlier `haydee-callejas-site.vercel.app` (confirmed now 404s). That was a manual domain swap, **not** a project rename — renaming a Vercel project does not automatically move or create domains.
+- `haydeecallejas.net` — **being retired.** Previously used only for her email; Haydee has decided not to renew it once her new business email is stable. Her son holds credentials. Do not touch MX/email DNS records until retirement is actually executed and confirmed.
+- `haydeecallejas.com` — **live and canonical.** DNS points at Vercel; apex 308-redirects to `www.haydeecallejas.com`, which serves the site. `metadataBase`, canonical tags, and OG URLs all point at `www`. WHOIS registrant being updated to Haydee's legal name/info; TEKGUYZ retains operational admin.
+- Prior interim URL `https://haydeecallejas.vercel.app` still resolves but is no longer referenced anywhere in the code.
 
 ## 3b. Phase 1 Stack Decision (settled)
-Next.js App Router + TypeScript + Tailwind, deployed Vercel-native — not the earlier-considered single-page React + Vite build, and not a static export. Deliberate call, not drift: Vercel-native rendering conventions made `next/image`'s on-demand Image Optimization, OG/share-image generation, meta tags, and Analytics wiring meaningfully easier to get right than bolting them onto a bare Vite SPA or a static export. Given the amount already shipped on this stack (video hero, lightbox, OG/meta, Analytics), this is the settled Phase 1 stack, full stop — not open for revisit absent a real forcing function.
+Next.js App Router + TypeScript + Tailwind, deployed Vercel-native — not the earlier-considered single-page React + Vite build, and not a static export. Deliberate call: Vercel-native rendering made `next/image` optimization, OG/share-image generation, meta tags, and Analytics wiring meaningfully easier than a bare Vite SPA or static export. Settled, not open for revisit absent a real forcing function.
 
 ## 4. Brand Voice
 Sophisticated, artistic, authentic, exclusive — never spammy or discount-driven. Language should read like it comes from someone who understands leather craftsmanship, not a retail copywriter. Avoid urgency clichés ("Limited time!", "Don't miss out!"); convey scarcity and exclusivity through restraint, not volume.
@@ -42,75 +47,99 @@ No live connector exists between Google Photos and this project. Working process
 2. Upload directly to this project's Files (or attach in chat for one-off use).
 3. Tag each batch on upload: product name, leather type/texture, color, intended use (campaign / evergreen / GBP / social), target phase.
 
+**Current scale:** the Google Photos campaign asset library now holds 49 files — 4 logo variants (icon+wordmark and icon-only, light/dark) + 2 animated versions (6 logo files total, see Section 11), plus campaign photos/videos.
+
 ## 7. AI Content Generation Stack
-- **Google Pomelli** — brand DNA + campaign generation. Business DNA is entered manually (not auto-scraped from a website) — preserves luxury tone and removes any dependency on a live site existing first.
-- **Nano Banana Pro** — image generation model behind Pomelli's Photoshoot feature; also usable standalone. Direct fix for current phone-shot product photo quality.
-- **Google Flow** — video creation, using Veo 3.1 (higher-fidelity) and Gemini Omni Flash (fast, conversational multi-turn edits).
-- Claude writes the DNA text, catalog copy, campaign narrative, and image/video prompts. Pomelli/Nano Banana Pro/Flow apply that at speed and scale. Claude does final tone/QA pass on anything generated externally.
+- **Google Pomelli** — brand DNA + campaign generation. Business DNA entered manually, not auto-scraped — preserves luxury tone, no dependency on a live site existing.
+- **Nano Banana Pro** — image generation (Pomelli's Photoshoot feature; also standalone). Direct fix for phone-shot product photo quality.
+- **Google Flow** — video creation, Veo 3.1 (higher-fidelity) and Gemini Omni Flash (fast, conversational edits).
+- Claude writes the DNA text, catalog copy, campaign narrative, image/video prompts. Pomelli/Nano Banana Pro/Flow apply that at speed. Claude does final tone/QA on anything generated externally.
+- **Note:** general-purpose AI tools other than Claude (e.g., Google Gemini used ad hoc for business/billing questions) do not have this project's context and should not be treated as a source of scope, phase structure, or deliverable decisions — TEKGUYZ confirmed this after Gemini proposed an incompatible phase framework based on incomplete information. Claude (this project + Claude Code in the repo) remains the sole source of truth for scope and documentation.
+- **Active use as of now:** TEKGUYZ is producing lifestyle/campaign videos per-product and as a group campaign piece for the Instagram push — see Section 16 for current prompt templates and campaign copy bank.
 
 ## 8. Domain & Email Infrastructure
-- `haydeecallejas.com` — purchased/in progress under TEKGUYZ account, registrant contact set to Haydee's name/email, WHOIS privacy on. Canonical domain for the new site.
-- `haydeecallejas.net` — stays as-is for her existing email; not touched by the new site build.
-- Business email provider (PurelyMail/Google Workspace/Microsoft 365) — still undecided, not urgent, not a Phase 1 blocker.
+- `haydeecallejas.com` — live, canonical domain. WHOIS being updated to Haydee's name; TEKGUYZ retains admin.
+- `haydeecallejas.net` — being retired (see Section 3a).
+- **Business email: resolved and live** — Google Workspace (Business Starter), `hc@haydeecallejas.com`. Billing identity verification complete (see Section 1).
 
 ## 9. Current Deliverable (Phase 1): Mid-Year Clearance Campaign — LOCKED, live in `products.ts`
 Products to move — leftover inventory Haydee wants cleared to make room for new work.
 
 | Product | Description | Colors | Price |
 |---|---|---|---|
-| Mini bag crossbody | Gamuza italiana. Tacto suave, uso diario. | Violeta, Café, Crema (3) | $75.00 |
-| Cartera corazón | Cuero italiano genuino. Diseño llamativo, acabado impecable. | Rojo, Café, Negro, Plateado (4) | $95.00 |
-| Telefonera | Cuero italiano genuino. Compacta, ideal para lo esencial. | Violeta, Naranja, Crema, Plateado, Verde (5) | $75.00 |
+| Mini bag crossbody | Gamuza italiana. Tacto suave, ideal para uso diario. | Violeta, Café, Crema (3) | $75.00 |
+| Cartera corazón | Cuero italiano genuino. Diseño llamativo, acabado sobrio. | Rojo, Café, Negro, Plateado (4) | $95.00 |
+| Telefonera cuero | Cuero italiano genuino. Compacta, ideal para lo esencial. | Violeta, Naranja, Crema, Plateado, Verde (5) | $75.00 |
 | Telefonera rafia | Cuero italiano genuino y rafia. Textura natural, toque artesanal. | Violeta, Dorado (2) | $75.00 |
 
-14 total color/style variants across 4 product lines. Price shown as bare "$" figure — USD is implied, córdobas never used, no "USD" suffix added per client instruction. **"Genuino" is a required word on all three genuine-leather products — do not drop it in any future copy pass; the crossbody is suede, correctly has no "genuino" claim.** Cartera corazón's description revised 2026-07-09: "Diseño statement" was Spanglish, replaced with "Diseño llamativo" — pure Spanish, same meaning, material info unchanged.
+14 total color/style variants across 4 product lines. Price shown as bare "$" figure — USD implied, córdobas never used. **"Genuino" required on all three genuine-leather products** — never drop it; the crossbody is suede, correctly has no "genuino" claim. "Telefonera" renamed "Telefonera cuero" and two descriptions lightly reworded — purely to fix mobile line-wrap alignment across the 4-card grid; meaning and material claims unchanged. CTA button text changed from "Consultar" to "Me interesa" — the former read too formal/legal in Spanish, the latter matches the pre-filled WhatsApp message tone.
 
 ## 10. Current Sales Channel & Context
-- Sole sales channel today: WhatsApp, with a generic auto-reply for inbound purchase interest.
-- Strong organic traction — sizable Instagram/Facebook following in Nicaragua, frequent unsolicited interest/purchase inquiries — undercut by inconsistent response capacity, not lack of demand.
-- She's disengaged from the current leftover inventory and wants to return focus to new exotic-leather pieces — this campaign clears space for that, framed positively, not as an admission of failure.
-- **Never state specific remaining-quantity numbers** anywhere client-facing ("solo quedan X"), even if true at some point. More of any color/style can genuinely be produced on demand if worth it — this stays internal, never surfaced to buyers, and is exactly why exact-count scarcity claims must never appear on-site.
+- Primary sales channel is now the live site + WhatsApp deep links, replacing the prior Beacons link, which only offered a generic WhatsApp auto-message and a newsletter signup — no real purchase path. The full multi-product catalog site (Phase 4) was deferred specifically because receiving payments from Nicaragua has real unresolved friction; Phase 1 was built instead to solve the client's actual urgent need directly.
+- A multi-product cart is in progress (see `PRD.md` Section 7, item 4): users will be able to select more than one product/color, and the WhatsApp CTA will itemize all selections with individual prices and a total, instead of one message per product.
+- Strong organic traction — 12.8K Instagram following in Nicaragua, frequent unsolicited interest — previously undercut by inconsistent response capacity, not lack of demand.
+- She's disengaged from the current leftover inventory and wants to refocus on new exotic-leather pieces — campaign clears space for that, framed positively.
+- **Never state specific remaining-quantity numbers** anywhere client-facing. More of any color/style can genuinely be produced on demand — stays internal, never surfaced to buyers.
 
 ## 11. Logo Status — DONE
-Rebuilt from Pixel-enhanced source via solid-background generation (not transparency — generative models can't produce real alpha channels reliably; solid-fill was the correct approach). Final assets:
-- `haydee-logo-for-light-bg` — black mark, solid white background, square + 3:4 crop, animated version done
-- `haydee-logo-for-dark-bg` — white mark, solid black background, square + 3:4 crop, animated version done
-Both uploaded to Project Files and archived in the shared Google Photos album.
+Rebuilt from Pixel-enhanced source via solid-background generation. Final assets — 4 static variants (1760×1760 each) plus 2 animated versions, 6 logo files total. Exact filenames and use-case mapping (2026-07-17):
+- `cover-light-bg.png` — icon + wordmark, solid white/light background — on-site header logo.
+- `cover-dark-bg.png` — icon + wordmark, solid black background — on-site footer logo.
+- `profile-light-bg.png` — icon only, solid light background — reserve/alternate profile-picture source.
+- `profile-dark-bg.png` — icon only, solid black background — source for the full favicon set (`app/favicon.ico`, `app/icon.png`, `app/apple-icon.png`), the OG share-image logo element, and social profile pictures (Instagram profile photo already updated from this file). **Known issue:** a faint gray smudge artifact is visible in the upper-right of the frame at full resolution — confirmed a source-file issue, not introduced by any resizing/compositing done on it. Still usable at current sizes (barely visible downscaled), but pending a TEKGUYZ/client decision on whether to get it corrected.
+- 2 animated versions (light-bg/dark-bg) — unchanged, not part of this file swap.
 
-## 12. Contact Mechanism Decision (Phase 1 site) — revised 2026-07-09
-- **Primary CTA: WhatsApp deep link per product**, pre-filled message with product name/color/price (`wa.me/50589000408?text=...`). No payment processor needed — she confirms and closes the sale over WhatsApp as she does now, just without the generic-auto-reply gap. This is now the *only* action on each product card.
-- **Secondary contact — footer only, not per-product.** Originally a `mailto:` link duplicated on every product card; consolidated 2026-07-09 into a single footer block (Instagram → phone → email) since repeating the same contact channel four times per page was clutter, not redundancy-as-safety-net. EmailJS form was considered earlier and dropped for the same reason a plain link was preferred over any form: zero build cost, zero friction.
-- **WhatsApp "call" link — not implemented.** No reliable universal deep-link scheme for triggering a WhatsApp voice call from a website across platforms; only the message deep link is dependable. Message-based CTA is the one that ships.
+These four static files replaced the earlier `haydee-logo-for-light-bg` / `haydee-logo-for-dark-bg` pair referenced in older notes — those are superseded and no longer in the site repo. Rollout to all other social platforms (Facebook, WhatsApp Business, etc.) is in progress as part of the current social takeover. Part of the 49-file Google Photos campaign asset library (Section 6).
 
-## 13. Media Asset Status (Phase 1 campaign) — site-usage status updated 2026-07-09
-- Logos: done (Section 11). Dark-bg version's background was color-corrected 2026-07-09 (was pure #000000, now #0a0a0a) to match the site's actual near-black token — was showing as a visibly darker square against the surrounding UI.
-- Hero zoom videos: 4 total exist (one per product line), 1080p, Veo 3.1 Fast — **only one is used on-site at a time** (compressed and swapped into the repo as needed; crossbody was the hero video, swapped to the heart-bag video 2026-07-09, compressed to `hero-heart-web.mp4`, 604KB). The other 3 are campaign/social assets, not wired into the website, and don't live in the site repo — added/removed from `public/video/` as whichever is currently the active hero, backed up externally otherwise.
-- Texture macro videos: 2 exist, **not used on-site** — campaign/social assets only, not in the site repo.
-- ~~Flat-lay images~~ — resolved 2026-07-09: removed entirely (the `flatlayUrl` field, its data, and all 4 source images). Root cause wasn't mobile sizing — the collage-grid format (multiple product shots stitched into one image) doesn't work as a single card thumbnail at any size, too much visual information compressed too small. Backed up in Google Photos, available for marketing use outside the site.
-- Lifestyle/in-use shots: **not started** — target one per product line (4 total)
-- 51-second highlight video (licensed in-app track, brightness/contrast enhanced): both audio and silent versions exist, **not used on-site** — the hero originally used this, later swapped to the crossbody product video instead; removed from the site repo 2026-07-09, campaign/social asset only now.
-- 14 curated product stills (one per color/style variant, Pixel-enhanced): done, **in active use** — every product card image and the OG share image (Section 13a) are sourced from these.
-- **New 2026-07-09: OG/share image** — a dedicated 1200×630 composite (not a stretched product still): `heart-red.jpg` product photo (left panel) + logo + headline/tagline on an ink panel (right panel), vertically centered. Verified live via direct byte comparison against the deployed file.
-- **New 2026-07-09: favicon set** — `.ico` (32×32), `icon.png` (512×512), `apple-icon.png` (180×180), all generated from the light-bg logo.
+## 12. Contact Mechanism Decision (Phase 1 site)
+- **Primary CTA: WhatsApp deep link per product**, pre-filled message with product name/color/price. Button text "Me interesa." This is the card's *only* action.
+- **Secondary contact — footer only, not per-product:** Instagram → Facebook → phone → email, in that order. Instagram and Facebook icon links also appear in the header (added 2026-07-16).
+- **WhatsApp "call" link — not implemented** (no reliable cross-platform deep-link scheme).
 
-## 14. Open Items (fill in as they're resolved)
-- [x] Domain ownership status for haydeecallejas.net — resolved: parked, no site, son holds credentials, actively used for her email only
-- [x] Domain for the new site — resolved: haydeecallejas.com purchased
-- [x] Logo — resolved, done
-- [x] Contact mechanism — resolved: WhatsApp deep link primary, mailto link backup
-- [x] Instagram handle/follower count — resolved: @haydeecallejas, 12.8K (see Section 15)
-- [x] Phase 1 stack — resolved: Next.js App Router, Vercel-native (see Section 3b)
-- [x] Product descriptions — resolved: tightened copy, genuino preserved on genuine-leather items, no Spanglish (see Section 9)
-- [x] OG/share image, favicons, page metadata — resolved 2026-07-09 (see Section 13)
-- [x] Vercel domain switch — resolved 2026-07-09: live at `haydeecallejas.vercel.app` (interim, since superseded), done via Settings → Domains, not a project rename (see Section 3a)
-- [x] Flat-lay dead-field cleanup — resolved 2026-07-09: removed entirely (see Section 13)
-- [x] Custom domain (`haydeecallejas.com`) — resolved 2026-07-09: purchased, DNS pointed at Vercel, canonical URL is `www.haydeecallejas.com` (apex redirects there) (see Section 3a)
-- [ ] Business email provider decision
-- [ ] Lifestyle/in-use shots (4 needed)
-- [ ] Full product line beyond the 4 clearance items (for later phases)
-- [ ] Target markets beyond local (regional / national / international)
-- [ ] Nicaragua-compatible payment processor (needed only if/when Phase 4 happens)
+## 13. Media Asset Status (Phase 1 campaign)
+- Logos: done — 6 files (4 static variants + 2 animated), see Section 11. Now rolling out across all social platforms, not just the site and Instagram. Profile logo and contact email are already updated on Facebook and Threads, not just Instagram (bio-link replacement below remains Instagram-specific — that's where the Beacons link lived).
+- Hero video: `hero-heart-web.mp4` (604KB) live on-site. Other 3 product hero videos + 2 texture macro videos + the 51-second highlight video are campaign/social assets only, not in the site repo, available for the Instagram push.
+- Flat-lay images: removed from site use entirely; backed up in Google Photos, available for marketing use outside the site.
+- Lifestyle/in-use shots: in active production via Veo3/Nano Banana Pro/Pomelli, for both the Instagram campaign and possible future on-site use — not yet finalized for either.
+- 14 curated product stills: done, in active use (site + OG image).
+- OG/share image, favicon set: done — rebuilt 2026-07-17 from `profile-dark-bg.png` (see Section 11 for the known source-file artifact on that file).
+- Instagram profile updated: new high-res logo as profile photo; bio link replaced (Beacons removed) with direct link to `haydeecallejas.com`, link title "Compra aquí."
+
+## 14. Open Items
+- [x] Domain, logo, contact mechanism, stack, product descriptions, OG/metadata, custom domain, business email — all resolved.
+- [x] Client approval on Phase 1 site — resolved, Haydee has seen it and loves it.
+- [x] Billing/identity verification for Google Workspace — resolved.
+- [ ] GBP (Google Business Profile) listing — pending confirmation from Haydee on showroom type (standalone / shared-consignment, possibly tied to "Shap Collective Store" / by-appointment-only) before any listing is created.
+- [ ] Corrected source file for `profile-dark-bg.png` — visible smudge artifact in the upper-right of the frame (see Section 11); low-visibility at current use sizes, not blocking, TEKGUYZ/client call on whether to fix.
+- [ ] Multi-product cart — in progress; WhatsApp CTA to itemize all selected products with a total (see `PRD.md` Section 7, item 4).
+- [ ] WHOIS transfer to Haydee's name — in progress.
+- [ ] Lifestyle/in-use shots (4 needed) — in progress via AI video generation, not finalized.
+- [ ] `haydeecallejas.net` retirement — decision made, execution/timing TBD.
+- [ ] Exact scope of the additional element Haydee wants added to the current site — undefined, needs direct follow-up.
+- [ ] Full itemized deliverable list for the initial payment fee — being finalized (media assets, campaign package, social rebrand confirmed; "a few more things" still needs to be made explicit — see Section 16).
+- [ ] Written payment terms document for Haydee — draft in progress (see Section 16).
+- [ ] Brand Book — Haydee is searching for it (cloud or physical); not currently in TEKGUYZ's possession.
+- [ ] Full product line beyond the 4 clearance items (Phase 4, not scheduled).
+- [ ] Target markets beyond local (regional/national/international).
+- [ ] Nicaragua-compatible payment processor (only if/when Phase 4 happens).
 
 ## 15. Social Presence
-- Instagram: `@haydeecallejas` — **12.8K followers**, primary and only active social platform. Bio: "Haydee Callejas Official," Designer, "Carteras • Accesorios • Arte de Vivir," "Cuero Genuino & Pieles Exóticas."
-- This is real, verifiable trust signal for site visitors — link to the actual profile directly (header or footer icon/link to `instagram.com/haydeecallejas`), don't just cite the follower count as unlinked text.
+- Instagram: `@haydeecallejas` — 12.8K followers, primary platform by audience size.
+- Facebook: `https://www.facebook.com/haydeecallejas/` — linked directly from the site header and footer alongside Instagram (added 2026-07-16). Logo and contact email already updated to current branding.
+- Threads: exists, part of the current social takeover — logo and contact email already updated, same as Facebook. Not yet linked from the site (client hasn't asked for that, and TEKGUYZ held off adding it alongside the Facebook link).
+- Bio: "Haydee Callejas Official," Designer, "Carteras • Accesorios • Arte de Vivir," "Cuero Genuino & Pieles Exóticas." Core bio unchanged; a temporary campaign line during the clearance window is TEKGUYZ's call, minor, easily reverted.
+- **Profile link:** `haydeecallejas.com`, title "Compra aquí" — replaced prior Beacons link (generic WhatsApp auto-message), on Instagram specifically.
+- Prior promoted posts have real reach (one hit 4.2K views/engagement per client-shared screenshot) — worth boosting the campaign reveal post and at least one mid-campaign product carousel.
+- **Unified copy/tone mandate:** every platform (Instagram, Facebook, Threads, WhatsApp Business, any others) needs matching bio copy, contact info (pointing to the new `.com` email, not `.net`), and visual branding (new logo, matching banners/covers). Logo and contact email are already live on Facebook and Threads, not just Instagram (see Section 13) — full bio copy/banner parity across all platforms is still rolling out as part of the active "social takeover" work.
+
+## 16. Instagram Campaign & Client Deliverables — Mid-Year Clearance (new section)
+Campaign is starting now, at Haydee's request, ahead of the formal Phase 3 timeline.
+
+**Campaign copy bank (Spanish, locked phrases for use across video/image/caption text):**
+- **"Liquidación de Medio Año"** — established headline, already live on-site. Use as an opening title card in videos; stay consistent with on-site language.
+- **"Todo debe venderse"** — strongest, most definitive line. Use as a closing CTA card in videos, immediately before the WhatsApp/site prompt.
+- **"Aquí empieza la liquidación"** — better suited as caption text on the reveal post than baked into video footage; don't stack all three phrases in a single asset.
+
+**Cadence guidance:** reveal post/Reel announcing the site first (standalone) → per-product carousels using the 14 curated stills → one boosted post mid-campaign → reminder near the end. One consistent CTA per asset (site link in bio), not a mix of DM/comment/link asks.
+
+**Client deliverable/payment tracking:** the initial fee is tied to a specific deliverable set TEKGUYZ has described verbally (media assets, campaign info package, social handle rebrand to the new logo across platforms, "a few more things" — not yet itemized). Before invoicing, this list needs to be made explicit and written down — see the separate client-facing payment terms draft. Do not treat any deliverable as "done" for billing purposes until it's on that explicit list and actually verified complete.
