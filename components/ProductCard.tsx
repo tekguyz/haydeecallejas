@@ -6,7 +6,7 @@ import type { Product } from "@/lib/products";
 import { WhatsAppIcon, XIcon, ZoomIcon } from "@/components/Icons";
 import { siteCopy } from "@/lib/siteCopy";
 
-const WHATSAPP_NUMBER = "50589000408";
+const WHATSAPP_NUMBER = "50589033134";
 const MAX_VISIBLE_SWATCHES = 4;
 
 export function ProductCard({

@@ -7,7 +7,7 @@ export const siteCopy = {
     trustLine: "+12.8K seguidores en Instagram avalan su trabajo",
   },
   cta: {
-    buttonText: "Me interesa",
+    buttonText: "Compra ya",
   },
   footer: {
     brandName: "Haydee Callejas",
