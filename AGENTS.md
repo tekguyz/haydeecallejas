@@ -4,7 +4,8 @@ Read `CLAUDE.md` first. It holds this repo's rules for every agent, not only Cla
 
 ## Rules that apply to you
 
-- **Never run `npm test`.** This repo has no test script yet. When code tests are added, they use Vitest with an `npm run test:unit` script; run that before a commit.
+- **Never run `npm test`.** Tests use Vitest: run `npm run test:unit` before a commit.
+- **Look:** `DESIGN.md` is the rulebook for every screen. Public text rules (Spanish, no colour names, no prices, no phone number in git) are in `CLAUDE.md`.
 - **No secrets in git.** No token or key in a commit, a committed `.env` or a commit message.
 - **Close issues from the PR.** The PR body says `closes #N` when it finishes issue N, `refs #N` when it is only part of it.
 - **Work left over** goes in a GitHub issue in this repo. Say its number.
