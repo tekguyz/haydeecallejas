@@ -26,7 +26,7 @@ export function Order() {
           <ul className="places">
             {PLACES.map((p) => (
               <li key={p.name}>
-                <b>{p.name}</b>
+                <b translate="no">{p.name}</b>
                 <span>{p.detail}</span>
               </li>
             ))}

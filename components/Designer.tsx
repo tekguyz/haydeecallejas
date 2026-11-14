@@ -10,7 +10,7 @@ export function Designer() {
             <Image src={`/photos/${DESIGNER.photo}`} alt={DESIGNER.alt} fill sizes="(max-width: 960px) 100vw, 50vw" />
           </div>
           <div className="text">
-            <h2 id="haydee-titulo">Haydeé Callejas</h2>
+            <h2 id="haydee-titulo" translate="no">Haydeé Callejas</h2>
             <p className="lead">{DESIGNER.lead}</p>
             <ol className="story">
               {STORY.map((s) => (

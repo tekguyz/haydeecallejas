@@ -16,7 +16,7 @@ export function Collections({ collections, onPick }: { collections: Collection[]
                 <span className="ph">
                   <Image src={`/photos/${c.photo}`} alt="" fill sizes="(max-width: 960px) 68vw, 20vw" />
                 </span>
-                <h3>{c.name}</h3>
+                <h3 translate="no">{c.name}</h3>
                 <p>{c.line}</p>
               </a>
             </li>
