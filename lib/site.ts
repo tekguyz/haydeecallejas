@@ -18,11 +18,15 @@ export const BRAND = {
 };
 
 // The home page until Haydee says go (the full site is at /preview).
-export const SOON: Photo & { title: string; line: string } = {
+export const SOON: Photo & { kicker: string; title: string; line: string; aside: string; ghost: string; detail: Photo } = {
   photo: "pool-yute-tote.jpg",
-  alt: "",
+  alt: "Una mujer camina junto a una piscina con el tote de yute bordado Sagrado Corazón",
+  kicker: "Carteras de autor · Nicaragua",
   title: "Muy pronto",
   line: "Un nuevo espacio para las carteras de autor de Haydee Callejas, hechas en Nicaragua. Mientras tanto, encuéntrenos en Instagram y Facebook.",
+  aside: "Cuero genuino y pieles exóticas, diseñadas por Haydeé Callejas y hechas a mano con maestros artesanos.",
+  ghost: "Carteras",
+  detail: { photo: "gigi-scarf.jpg", alt: "Una Gigi mini bag con pañuelo" },
 };
 
 export const HERO: Photo & { title: string; line: string } = {

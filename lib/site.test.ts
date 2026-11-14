@@ -26,7 +26,7 @@ describe("site data", () => {
     for (const p of PIECES) expect(ids, p.name).toContain(p.collection);
   });
   it("every photo file exists", () => {
-    const photos = [...COLLECTIONS, ...PIECES, ...STRIP, HERO, DESIGNER, SOON].map((x) => x.photo);
+    const photos = [...COLLECTIONS, ...PIECES, ...STRIP, HERO, DESIGNER, SOON, SOON.detail].map((x) => x.photo);
     for (const f of photos) expect(existsSync(join("public", "photos", f)), f).toBe(true);
   });
   it("never names a colour", () => {
