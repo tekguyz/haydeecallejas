@@ -160,15 +160,32 @@ footer small { display: block; width: 100%; color: #b5b1aa; font-size: 14px; mar
   *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
 }
 
-/* Coming soon (home until launch): her photo, darkened, logo and one line */
-.soon { position: relative; min-height: 100svh; display: grid; place-items: center; color: #fff; background: #1d2418; overflow: hidden; }
-.soon-photo { object-fit: cover; object-position: 50% 40%; }
-.soon::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.58); }
-.soon-copy { position: relative; z-index: 1; text-align: center; padding: 48px 24px; max-width: 640px; }
-.soon-logo { width: 190px; height: auto; margin: 0 auto 36px; }
-.soon h1 { font-size: clamp(54px, 9vw, 112px); line-height: .95; }
-.soon p { margin: 22px auto 0; font-size: 19px; max-width: 44ch; }
-.soon ul { display: flex; justify-content: center; gap: 32px; list-style: none; margin-top: 30px; padding: 0; }
+/* Coming soon (home until launch): an editorial cover on white. Copy left, her photo centre, a note and a small photo right, a pale word behind. */
+.soon { position: relative; min-height: 100svh; display: grid; grid-template-columns: 1fr minmax(0, 36vw) minmax(0, 15vw); grid-template-rows: auto 1fr; column-gap: clamp(24px, 3vw, 56px); padding: 0 clamp(24px, 4vw, 64px) 56px; overflow: hidden; background: var(--paper); color: var(--ink); }
+.soon-ghost { position: absolute; left: 27%; top: 0; bottom: 0; writing-mode: vertical-rl; display: flex; align-items: center; justify-content: center; font: 800 min(15vw, 16svh)/1 var(--display); letter-spacing: -0.015em; color: var(--band); white-space: nowrap; pointer-events: none; user-select: none; }
+.soon-head { grid-column: 1 / -1; position: relative; z-index: 2; padding: 28px 0 32px; }
+.soon-logo { width: 104px; height: auto; filter: brightness(0); }
+.soon-copy { grid-column: 1; grid-row: 2; position: relative; z-index: 2; align-self: center; margin-right: calc(-1 * clamp(80px, 9vw, 160px)); }
+.soon-kicker { font: 600 13px var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.soon h1 { margin-top: 18px; font-size: clamp(56px, 8.4vw, 136px); line-height: .92; }
+.soon-line { margin-top: 26px; max-width: 34ch; font-size: 17px; color: var(--muted); }
+.soon ul { display: flex; gap: 28px; list-style: none; margin-top: 26px; padding: 0; }
 .soon ul a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
 .soon ul a:hover { text-decoration-thickness: 1px; }
-.soon :focus-visible { outline-color: #fff; }
+.soon-photo { grid-column: 2; grid-row: 2; position: relative; z-index: 1; aspect-ratio: 4 / 5; align-self: start; background: var(--band); }
+.soon-photo img, .soon-detail img { object-fit: cover; }
+.soon-aside { grid-column: 3; grid-row: 2; position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; }
+.soon-aside p { font-size: 14px; line-height: 1.6; color: var(--muted); }
+.soon-detail { position: relative; aspect-ratio: 4 / 5; background: var(--band); }
+@media (max-width: 860px) {
+  .soon { grid-template-columns: 1fr 34%; grid-template-rows: auto auto auto auto; padding: 0 20px 40px; column-gap: 16px; }
+  .soon-ghost { display: none; }
+  .soon-head { padding: 20px 0 24px; }
+  .soon-logo { width: 84px; }
+  .soon-copy { grid-column: 1 / -1; grid-row: 2; margin: 0 0 28px; }
+  .soon h1 { font-size: clamp(52px, 16vw, 88px); }
+  .soon-photo { grid-column: 1 / -1; grid-row: 3; }
+  .soon-aside { grid-column: 1 / -1; grid-row: 4; flex-direction: row; align-items: end; gap: 16px; margin-top: 16px; }
+  .soon-aside p { flex: 1; }
+  .soon-detail { flex: 0 0 34%; }
+}
