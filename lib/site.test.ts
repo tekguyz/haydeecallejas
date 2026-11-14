@@ -42,7 +42,7 @@ describe("site data", () => {
 
 describe("visibleCollections", () => {
   it("drops a collection with no pieces", () => {
-    const extra = { id: "vacia", name: "Vacía", line: "Sin piezas.", photo: "gigi-mint.jpg" };
+    const extra = { id: "vacia", name: "Vacía", line: "Sin piezas.", photo: "gigi-scarf.jpg" };
     const shown = visibleCollections([...COLLECTIONS, extra], PIECES).map((c) => c.id);
     expect(shown).not.toContain("vacia");
     expect(shown).toEqual(COLLECTIONS.map((c) => c.id));

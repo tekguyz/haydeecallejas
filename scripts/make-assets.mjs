@@ -18,7 +18,7 @@ const logo = await sharp("public/logo-cover-white.png").resize({ height: 220 }).
 const shade = Buffer.from(
   `<svg width="1200" height="630"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".6"/><stop offset=".6" stop-color="#000" stop-opacity="0"/></linearGradient></defs><rect width="1200" height="630" fill="url(#g)"/></svg>`,
 );
-await sharp("public/photos/pool-yute-tote.jpg")
+await sharp("public/photos/sacred-heart-tote-pool.jpg")
   .resize(1200, 630, { fit: "cover", position: "centre" })
   .composite([{ input: shade }, { input: logo, left: 72, top: 205 }])
   .jpeg({ quality: 82, mozjpeg: true })

@@ -38,7 +38,7 @@ Two jobs, in this order on every screen: (1) show a real designer with a story, 
 
 ## Page order
 
-1. Hero: full-bleed photo (`theirs/instagram/pool-yute-tote.jpg`), white logo, nav, headline "Carteras de autor, hechas en Nicaragua", one line, "Pedir por WhatsApp" and "Ver las piezas".
+1. Hero: full-bleed photo (`public/photos/sacred-heart-tote-pool.jpg`), white logo, nav, headline "Carteras de autor, hechas en Nicaragua", one line, "Pedir por WhatsApp" and "Ver las piezas".
 2. Colecciones: five portrait photos with name and one line. Tapping one filters the pieces.
 3. Las piezas: tabs by collection, 4 columns on a laptop, 2 on a phone. Each piece: photo, name, one line, "Pedir por WhatsApp".
 4. Haydeé: her in her showroom doorway, her lead paragraph, the timeline (1991, 2000, 2016, 2023).

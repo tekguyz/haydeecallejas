@@ -18,7 +18,7 @@ export const BRAND = {
 };
 
 export const HERO: Photo & { title: string; line: string } = {
-  photo: "pool-yute-tote.jpg",
+  photo: "sacred-heart-tote-pool.jpg",
   alt: "Una mujer camina junto a una piscina con el tote de yute bordado Sagrado Corazón",
   title: "Carteras de autor, hechas en Nicaragua",
   line: "Cuero genuino y pieles exóticas, diseñadas por Haydeé Callejas y hechas a mano con maestros artesanos.",
@@ -27,23 +27,21 @@ export const HERO: Photo & { title: string; line: string } = {
 export const COLLECTIONS: Collection[] = [
   { id: "florence", name: "Florence", line: "Siluetas amplias en cuero, en pitón y en animal print.", photo: "florence-python.jpg" },
   { id: "essentials", name: "Essentials", line: "Cuero italiano, líneas limpias, lo justo para el día.", photo: "telefoneras-four.jpg" },
-  { id: "yute", name: "Yute bordado", line: "Yute con bordados hechos a mano. Cada una es única.", photo: "yute-sacred-heart-tote.jpg" },
+  { id: "yute", name: "Yute bordado", line: "Yute con bordados hechos a mano. Cada una es única.", photo: "sacred-heart-tote.jpg" },
   { id: "exoticas", name: "Pieles exóticas", line: "Pitón y cocodrilo, en ediciones pequeñas.", photo: "python-group.jpg" },
-  { id: "minis", name: "Minis", line: "Gigi, metálicas y bandoleras para la noche.", photo: "gigi-scarf.jpg" },
+  { id: "minis", name: "Minis", line: "La Gigi mini bag, en varios tonos y en grabado cocodrilo.", photo: "gigi-scarf.jpg" },
 ];
 
 export const PIECES: Piece[] = [
-  { name: "Tote de yute Sagrado Corazón", collection: "yute", photo: "yute-sacred-heart-tote.jpg", note: "Bordado a mano" },
+  { name: "Tote de yute Sagrado Corazón", collection: "yute", photo: "sacred-heart-tote.jpg", note: "Bordado a mano" },
   { name: "Florence en pitón", collection: "florence", photo: "florence-python.jpg", note: "Piel exótica" },
   { name: "Gigi mini bag", collection: "minis", photo: "gigi-scarf.jpg", note: "Varios tonos" },
   { name: "Telefonera Essentials", collection: "essentials", photo: "telefonera.jpg", note: "Cuero italiano" },
   { name: "Florence animal print", collection: "florence", photo: "florence-tote-leopard.jpg", note: "Cuero" },
   { name: "Cartera pitón", collection: "exoticas", photo: "python-tote-red.jpg", note: "Piel exótica" },
   { name: "Bolso cubo", collection: "essentials", photo: "bucket-bag-seated.jpg", note: "Cuero italiano" },
-  { name: "Mini metálica", collection: "minis", photo: "metallic-mini.jpg", note: "Para la noche" },
   { name: "Tote calado", collection: "exoticas", photo: "cutout-tote-rocks.jpg", note: "Cuero cortado a mano" },
   { name: "Florence", collection: "florence", photo: "florence-tote-plain.jpg", note: "Cuero" },
-  { name: "Bandolera acolchada", collection: "minis", photo: "quilted-crossbody.jpg", note: "Cuero" },
   { name: "Gigi croco", collection: "minis", photo: "gigi-croc-palm.jpg", note: "Grabado cocodrilo" },
 ];
 
