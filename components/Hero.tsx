@@ -1,36 +1,44 @@
-import { siteCopy } from "@/lib/siteCopy";
+import Image from "next/image";
+import { HERO } from "@/lib/site";
+import { waLink } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[70vh] w-full items-center justify-center overflow-hidden">
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        src="/video/hero-heart-web.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-      />
-      <div className="absolute inset-0 bg-ink/55" />
-      <div className="relative z-10 flex flex-col items-center gap-3 px-4 py-16 text-center sm:px-6">
-        <p className="text-display-md font-semibold tracking-[0.04em] text-on-dark uppercase">
-          {siteCopy.hero.eyebrow}
-        </p>
-        <h1 className="font-serif text-display-lg font-medium text-on-dark">
-          {siteCopy.hero.headline}
-        </h1>
-        <p className="max-w-sm text-body-md text-on-dark/90">
-          {siteCopy.hero.subhead}
-        </p>
-        <a
-          href="https://instagram.com/haydeecallejas"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-caption text-on-dark/70 underline underline-offset-2 transition-colors hover:text-on-dark"
-        >
-          {siteCopy.hero.trustLine}
-        </a>
+    <div className="hero" id="inicio">
+      <Image className="hero-photo" src={`/photos/${HERO.photo}`} alt={HERO.alt} fill preload fetchPriority="high" sizes="100vw" />
+      <div className="wrap">
+        <header>
+          <a href="#inicio" aria-label="Haydee Callejas, inicio">
+            <Image className="logo" src="/logo-profile-white.png" alt="" width={84} height={60} loading="eager" />
+          </a>
+          <nav aria-label="Principal">
+            <a href="#colecciones">Colecciones</a>
+            <a href="#piezas">Piezas</a>
+            <a href="#haydee">Haydeé</a>
+            <a href="#pedir">Cómo pedir</a>
+          </nav>
+          <a className="wa" href={waLink()}>
+            <WhatsAppIcon />
+            WhatsApp
+          </a>
+        </header>
       </div>
-    </section>
+      <div className="copy">
+        <div className="wrap">
+          <h1>{HERO.title}</h1>
+          <p>{HERO.line}</p>
+          <div className="row">
+            <a className="wa" href={waLink()}>
+              <WhatsAppIcon />
+              Pedir por WhatsApp
+            </a>
+            <a className="link" href="#piezas">
+              Ver las piezas
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

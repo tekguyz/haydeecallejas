@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {};
+const nextConfig: NextConfig = {
+  images: { formats: ["image/avif", "image/webp"], imageSizes: [32, 64, 128, 256, 384, 480] },
+};
 
 export default nextConfig;

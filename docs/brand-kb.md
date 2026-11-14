@@ -1,3 +1,5 @@
+> **History only.** These are the July 2026 clearance-site brand notes. The look today is `DESIGN.md`; the July code is at tag `july-2026-clearance`.
+
 # Haydee Callejas — Brand Master Knowledge Base
 Prepared by TEKGUYZ | Full rewrite — supersedes every prior version, including the stale one that predates the live site, the domain migration, and tonight's product corrections.
 
@@ -8,9 +10,9 @@ Haydee Callejas ("HC"). Nicaragua. Luxury accessories, genuine Italian leather a
 Haydee owns creative vision/product line. TEKGUYZ owns execution — not a creative director standing in for her, a technical/organizational partner. Domain/infrastructure: Haydee holds ultimate ownership, TEKGUYZ retains operational admin (DNS, Vercel, Google Workspace) on her behalf. Payment: informal family-rate arrangement, Phase 1 fee (~$1,200, covering site + brand assets + campaign media) invoiced once Phase 1 media is fully complete; future phases billed separately by hours, never bundled into a prior phase's fee.
 
 ## 3. ⚠️ Contact Numbers — Corrected, Verify Site Reflects This
-- **Business WhatsApp (correct, use everywhere client-facing):** `+505 8903 3134` / `wa.me/50589033134`
-- **Personal phone (NOT for business use, do not use in any WhatsApp deep link):** the number ending in `0408`.
-- **Known issue as of this writing:** the live site's per-product WhatsApp deep links were built using the personal `0408` number by mistake. This needs a Claude Code fix — replace every `wa.me` reference in the codebase with `50589033134`. Confirm fixed before treating this as resolved.
+- **Business WhatsApp (correct, use everywhere client-facing):** `[number removed, see Vercel setting]` / `wa.me/[number removed]`
+- **Personal phone (NOT for business use, do not use in any WhatsApp deep link):** the number ending in `[personal]`.
+- **Known issue as of this writing:** the live site's per-product WhatsApp deep links were built using the personal `[personal]` number by mistake. This needs a Claude Code fix — replace every `wa.me` reference in the codebase with [number removed]. Confirm fixed before treating this as resolved.
 
 ## 4. Phase Roadmap
 1. **Clearance Campaign + Sales Fix** — site built, live, Haydee-approved. Campaign media (video/images) still being produced.
@@ -60,7 +62,7 @@ Crossbody variant: opens with "Liquidación de Medio Año" only, product line re
 - See the separate Campaign Prompt Bank document for ready-to-use prompts (video, 4 image styles).
 
 ## 10. Social Presence
-Instagram bio (current): "👜 Carteras • Accesorios • Arte de Vivir / Cuero Genuino & Pieles Exóticas / Compra aquí 👇" + `wa.me/50589033134` link. No website link anywhere. Facebook, Threads mirror the same logo/contact info (in progress — Phase 2/3 concurrent work, not yet fully unified across all platforms).
+Instagram bio (current): "👜 Carteras • Accesorios • Arte de Vivir / Cuero Genuino & Pieles Exóticas / Compra aquí 👇" + `wa.me/[number removed]` link. No website link anywhere. Facebook, Threads mirror the same logo/contact info (in progress — Phase 2/3 concurrent work, not yet fully unified across all platforms).
 
 ## 11. Open Items
 - [ ] **WhatsApp number fix on live site — urgent, confirm with Claude Code.**

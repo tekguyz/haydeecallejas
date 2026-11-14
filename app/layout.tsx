@@ -1,66 +1,48 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Playfair_Display } from "next/font/google";
+import { Albert_Sans, Bodoni_Moda } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { siteCopy } from "@/lib/siteCopy";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { JsonLd } from "@/components/JsonLd";
+import { DESCRIPTION, SITE_URL, TITLE } from "@/lib/seo";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const bodoni = Bodoni_Moda({ subsets: ["latin"], weight: "800", style: "normal", variable: "--font-bodoni", display: "swap" });
+const albert = Albert_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-albert", display: "swap" });
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair-display",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-});
-
-const { title, description } = siteCopy.meta;
 const ogImage = {
-  url: "/images/og-image.jpg",
+  url: "/og.jpg",
   width: 1200,
   height: 630,
-  alt: title,
+  alt: "Una mujer camina con el tote de yute bordado Sagrado Corazón, con el logo de Haydee Callejas",
 };
 
-export const viewport: Viewport = {
-  themeColor: "#ffffff",
-};
+export const viewport: Viewport = { themeColor: "#000000" };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.haydeecallejas.com"),
-  title,
-  description,
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
   openGraph: {
-    title,
-    description,
-    url: "/",
-    siteName: siteCopy.footer.brandName,
-    locale: "es_NI",
     type: "website",
+    locale: "es_NI",
+    siteName: "Haydee Callejas",
+    url: "/",
+    title: TITLE,
+    description: DESCRIPTION,
     images: [ogImage],
   },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    images: [ogImage.url],
-  },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: [ogImage.url] },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="es"
-      className={`${geistSans.variable} ${playfairDisplay.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col font-sans">
+    <html lang="es" className={`${bodoni.variable} ${albert.variable}`}>
+      <body>
         {children}
+        <JsonLd />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
