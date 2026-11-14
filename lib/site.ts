@@ -17,6 +17,14 @@ export const BRAND = {
   facebook: "https://www.facebook.com/HaydeeCallejas/",
 };
 
+// The home page until Haydee says go (the full site is at /preview).
+export const SOON: Photo & { title: string; line: string } = {
+  photo: "pool-yute-tote.jpg",
+  alt: "",
+  title: "Muy pronto",
+  line: "Un nuevo espacio para las carteras de autor de Haydee Callejas, hechas en Nicaragua. Mientras tanto, encuéntrenos en Instagram y Facebook.",
+};
+
 export const HERO: Photo & { title: string; line: string } = {
   photo: "pool-yute-tote.jpg",
   alt: "Una mujer camina junto a una piscina con el tote de yute bordado Sagrado Corazón",

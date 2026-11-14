@@ -1,7 +1,9 @@
 # CLAUDE.md — Haydee Callejas website
 
 ## What this is
-Haydee Callejas's story site, live at `https://haydeecallejas.com` (`www` redirects to the bare domain). Haydee is a Nicaraguan handbag designer and a TEKGUYZ client. The page has two jobs, in this order: show a real designer with a story, and make ordering a bag one tap away through WhatsApp. No checkout, cart, CMS, database or sign-in.
+Haydee Callejas's story site, live at `https://haydeecallejas.com` (`www` redirects to the bare domain).
+
+**Paused (2026-11-14):** Haydee asked to wait. The home page is a "Muy pronto" page (`app/page.tsx`, words in `SOON` in `lib/site.ts`). The full site lives at `/preview`, marked noindex and left out of the sitemap, for the founder to pitch. To launch: move `app/preview/page.tsx` back to `app/page.tsx` and remove `SOON`. Haydee is a Nicaraguan handbag designer and a TEKGUYZ client. The page has two jobs, in this order: show a real designer with a story, and make ordering a bag one tap away through WhatsApp. No checkout, cart, CMS, database or sign-in.
 
 Issue: tekguyz/tekguyz-one#158. Spec and plan: `tekguyz-one/docs/superpowers/specs/2026-11-14-haydee-callejas-site-design.md` and `tekguyz-one/docs/superpowers/plans/2026-11-14-haydee-callejas-site.md`. Client facts and open questions: `tekguyz-one/clients/haydee-callejas/README.md`.
 
