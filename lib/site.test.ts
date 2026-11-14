@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import * as site from "./site";
-import { COLLECTIONS, PIECES, STRIP, HERO, DESIGNER, visibleCollections } from "./site";
+import { COLLECTIONS, PIECES, STRIP, HERO, DESIGNER, SOON, visibleCollections } from "./site";
 
 const COLOUR =
   /\b(rojo|roja|negro|negra|blanco|blanca|azul|verde|amarillo|amarilla|rosado|rosada|morado|morada|naranja|café|beige|dorado|dorada|plateado|plateada|gris|fucsia|celeste)\b/i;
@@ -26,7 +26,7 @@ describe("site data", () => {
     for (const p of PIECES) expect(ids, p.name).toContain(p.collection);
   });
   it("every photo file exists", () => {
-    const photos = [...COLLECTIONS, ...PIECES, ...STRIP, HERO, DESIGNER].map((x) => x.photo);
+    const photos = [...COLLECTIONS, ...PIECES, ...STRIP, HERO, DESIGNER, SOON].map((x) => x.photo);
     for (const f of photos) expect(existsSync(join("public", "photos", f)), f).toBe(true);
   });
   it("never names a colour", () => {
