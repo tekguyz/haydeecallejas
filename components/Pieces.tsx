@@ -38,7 +38,7 @@ export function Pieces({
               </div>
               <h3>{p.name}</h3>
               <p className="sub">{p.note}</p>
-              <a className="ask" href={waLink(p.name)} aria-label={`Pedir ${p.name} por WhatsApp`}>
+              <a className="ask" href={waLink(p.name)} aria-label={`Pedir por WhatsApp: ${p.name}`}>
                 <WhatsAppIcon />
                 Pedir por WhatsApp
               </a>

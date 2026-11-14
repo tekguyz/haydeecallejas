@@ -106,7 +106,7 @@ h2 { font-size: clamp(40px, 5.2vw, 80px); line-height: .98; }
 .places span { font-size: 15px; color: var(--muted); }
 .get h3 { font-size: 22px; font-family: var(--body); font-weight: 600; letter-spacing: 0; margin-bottom: 16px; }
 .ship { margin-top: 24px; font-size: 16px; color: var(--muted); }
-.ship a { color: var(--ink); text-underline-offset: 4px; }
+.ship a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
 
 /* Footer */
 footer { background: var(--ink); color: #fff; padding: 72px 0 48px; }

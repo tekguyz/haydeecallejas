@@ -6,11 +6,11 @@ import { WhatsAppIcon } from "./WhatsAppIcon";
 export function Hero() {
   return (
     <div className="hero" id="inicio">
-      <Image className="hero-photo" src={`/photos/${HERO.photo}`} alt={HERO.alt} fill priority sizes="100vw" />
+      <Image className="hero-photo" src={`/photos/${HERO.photo}`} alt={HERO.alt} fill preload fetchPriority="high" sizes="100vw" />
       <div className="wrap">
         <header>
           <a href="#inicio" aria-label="Haydee Callejas, inicio">
-            <Image className="logo" src="/logo-profile-white.png" alt="" width={640} height={456} priority />
+            <Image className="logo" src="/logo-profile-white.png" alt="" width={84} height={60} loading="eager" />
           </a>
           <nav aria-label="Principal">
             <a href="#colecciones">Colecciones</a>

@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer>
       <div className="wrap">
-        <Image className="logo" src="/logo-cover-white.png" alt="Haydee Callejas" width={640} height={406} />
+        <Image className="logo" src="/logo-cover-white.png" alt="Haydee Callejas" width={189} height={120} />
         <ul>
           <li>
             <a href={BRAND.instagram}>Instagram</a>
