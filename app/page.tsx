@@ -30,7 +30,7 @@ export default function Home() {
       <aside className="soon-aside">
         <p>{SOON.aside}</p>
         <div className="soon-detail">
-          <Image src={`/photos/${SOON.detail.photo}`} alt={SOON.detail.alt} fill sizes="(max-width: 860px) 40vw, 14vw" />
+          <Image src={`/photos/${SOON.detail.photo}`} alt={SOON.detail.alt} fill loading="eager" sizes="(max-width: 860px) 40vw, 14vw" />
         </div>
       </aside>
     </main>
